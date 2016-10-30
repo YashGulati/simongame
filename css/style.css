@@ -1,41 +1,38 @@
 .colorPiece {
   position: absolute;
-  height: 230px;
-  width: 230px;
+  height: 240px;
+  width: 240px;
   z-index: -1; }
 
 body {
   background-color: #f8f8f8; }
 
 #gameboard {
-  height: 450px;
-  width: 450px;
+  height: 420px;
+  width: 420px;
+  margin: 0 auto;
   position: relative;
-  margin: 75px auto;
-  border: 12px solid #444;
-  border-radius: 50%;
-  overflow: hidden;
-  z-index: 2; }
+  overflow: hidden; }
+  #gameboard #grayPortion {
+    border-radius: 50%;
+    height: inherit;
+    width: inherit;
+    border: 30px solid #333333; }
   #gameboard #green {
-    background-color: #00994D; }
+    background-color: #00994D;
+    top: 30px;
+    left: 30px; }
   #gameboard #red {
     background-color: #990000;
-    right: 0px; }
+    top: 30px;
+    right: -50px; }
   #gameboard #yellow {
     background-color: #FFFF00;
-    bottom: 0px; }
+    left: 30px;
+    bottom: -50px; }
   #gameboard #blue {
     background-color: #004D99;
-    right: 0px;
-    bottom: 0px; }
-  #gameboard #innerC {
-    height: 200px;
-    width: 200px;
-    background-color: #000;
-    margin: 125px auto;
-    border: 12px solid #444;
-    border-radius: 50%;
-    z-index: 3;
-    overflow: hidden; }
+    right: -50px;
+    bottom: -50px; }
 
 /*# sourceMappingURL=style.css.map */

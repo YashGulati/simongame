@@ -1,45 +1,45 @@
-$grayborderpx: 12px
-$heightwidthColor: 230px
+$grayborderpx: 30px
+$heightwidthColor: 240px
 $downgreen: #00994D
 $downred: #990000
 $downyellow: #FFFF00
 $downblue: #004D99
-
+$gameboardHW: 420px
+=circle
+  border-radius: 50%
+=hw($h,$w)
+  height: $h
+  width: $w
 .colorPiece
   position: absolute
-  height: $heightwidthColor
-  width: $heightwidthColor
+  +hw($heightwidthColor,$heightwidthColor)
   z-index: -1
 
 body
   background-color: #f8f8f8
 #gameboard
-  height: 450px
-  width: 450px
+  +hw($gameboardHW,$gameboardHW)
+  margin: 0 auto
   position: relative
-  margin: 75px auto
-  border: $grayborderpx solid #444
-  border-radius: 50%
   overflow: hidden
-  z-index: 2
+
+  #grayPortion
+    +circle
+    +hw(inherit,inherit)
+    border: 30px solid #333333
   #green
     background-color: $downgreen
+    top: 30px
+    left: 30px
   #red
     background-color: $downred
-    right: 0px
+    top: 30px
+    right: -50px
   #yellow
     background-color: $downyellow
-    bottom: 0px
+    left: 30px
+    bottom: -50px
   #blue
     background-color: $downblue
-    right: 0px
-    bottom: 0px
-  #innerC
-    height: 200px
-    width: 200px
-    background-color: #000
-    margin: 225-100px auto
-    border: $grayborderpx solid #444
-    border-radius: 50%
-    z-index: 3
-    overflow: hidden
+    right: -50px
+    bottom: -50px
