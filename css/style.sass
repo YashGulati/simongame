@@ -4,6 +4,13 @@ $downgreen: #00994D
 $downred: #990000
 $downyellow: #FFFF00
 $downblue: #004D99
+
+.colorPiece
+  position: absolute
+  height: $heightwidthColor
+  width: $heightwidthColor
+  z-index: -1
+
 body
   background-color: #f8f8f8
 #gameboard
@@ -14,43 +21,19 @@ body
   border: $grayborderpx solid #444
   border-radius: 50%
   overflow: hidden
-  z-index: -2
-  #innerC
-    height: 200px
-    width: 200px
-    background-color: #000
-    margin: 225-100px auto
-    border: 10px solid #444
-    border-radius: 50%
-    z-index: 1
+  z-index: 2
   #green
     background-color: $downgreen
-    position: absolute
-    z-index: -1
-    height: $heightwidthColor
-    width: $heightwidthColor
   #red
     background-color: $downred
-    position: absolute
-    z-index: -1
     right: 0px
-    height: $heightwidthColor
-    width: $heightwidthColor
   #yellow
     background-color: $downyellow
-    position: absolute
-    z-index: -1
     bottom: 0px
-    height: $heightwidthColor
-    width: $heightwidthColor
   #blue
     background-color: $downblue
-    position: absolute
-    z-index: -1
     right: 0px
     bottom: 0px
-    height: $heightwidthColor
-    width: $heightwidthColor
   #innerC
     height: 200px
     width: 200px
@@ -58,7 +41,5 @@ body
     margin: 225-100px auto
     border: $grayborderpx solid #444
     border-radius: 50%
-    z-index: 2
+    z-index: 3
     overflow: hidden
-  .quarterC
-    border: 3px solid red

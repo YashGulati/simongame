@@ -1,6 +1,6 @@
 // js
 $(document).ready(function(){
-  $('#gameboard').mousedown(function(){
+  $('#green').mousedown(function(){
     alert('a');
   });
   $('#green').mouseup(function(){
