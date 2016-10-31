@@ -32,13 +32,10 @@ $innerC_borderpx: 15px
 .hline
   @extend .grayLines
   +hw($grayborderpx,$gameboardHW)
-  // left: 0px
-  top: $gameboardHW/2 - $grayborderpx/2
+  top: $gameboardHW/2 + $grayborderpx/2
 .vline
   @extend .grayLines
   +hw($gameboardHW,$grayborderpx)
-  // left: $gameboardHW/2 - $grayborderpx/2
-  // top: 0px
 body
   background-color: #f8f8f8
 #gameboard
