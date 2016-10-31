@@ -1,4 +1,6 @@
 // compileCompressed: style.css
+*
+  margin: 0px
 $grayborderpx: 30px
 $grayborderColor: #333333
 $downgreen: #00A74A
@@ -21,25 +23,31 @@ $innerC_borderpx: 15px
   display: inline-block
 .grayLines
   background-color: $grayborderColor
-  z-index: 5
   position: absolute
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  z-index: 10
 .hline
   @extend .grayLines
   +hw($grayborderpx,$gameboardHW)
-  left: 0px
+  // left: 0px
   top: $gameboardHW/2 - $grayborderpx/2
 .vline
   @extend .grayLines
   +hw($gameboardHW,$grayborderpx)
-  left: $gameboardHW/2 - $grayborderpx/2
-  top: 0px
+  // left: $gameboardHW/2 - $grayborderpx/2
+  // top: 0px
 body
   background-color: #f8f8f8
 #gameboard
   +hw($gameboardHW,$gameboardHW)
   +circle
   margin: 0 auto
-  position: relative
+  position: absolute
+  left: 0px
+  right: 0px
   overflow: hidden
   border: 30px solid $grayborderColor
   z-index: 5
