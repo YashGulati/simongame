@@ -1,32 +1,31 @@
 $grayborderpx: 30px
-$heightwidthColor: 240px
-$downgreen: #00994D
+$downgreen: #00A74A
 $downred: #990000
-$downyellow: #FFFF00
+$downyellow: #CCA707
 $downblue: #004D99
 $gameboardHW: 420px
+$heightwidthColor: $gameboardHW/2
 =circle
   border-radius: 50%
 =hw($h,$w)
   height: $h
   width: $w
 .colorPiece
-  position: absolute
   +hw($heightwidthColor,$heightwidthColor)
   z-index: -1
+  float: left
+  display: inline-block
 
 body
   background-color: #f8f8f8
 #gameboard
   +hw($gameboardHW,$gameboardHW)
+  +circle
   margin: 0 auto
   position: relative
   overflow: hidden
-
-  #grayPortion
-    +circle
-    +hw(inherit,inherit)
-    border: 30px solid #333333
+  border: 30px solid #333333
+  z-index: 5
   #green
     background-color: $downgreen
     top: 30px

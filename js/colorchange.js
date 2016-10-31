@@ -1,7 +1,7 @@
 // js
 $(document).ready(function(){
   $('#green').mousedown(function(){
-    $('#green').css('background-color','green');
+    $('#green').css('background-color','#13ff7c');
   });
   $('#green').mouseup(function(){
     $('#green').css('background-color','#00994D');
