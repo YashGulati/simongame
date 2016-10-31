@@ -8,6 +8,7 @@ $downblue: #004D99
 $gameboardHW: 420px
 $heightwidthColor: $gameboardHW/2
 $innerC_HW: 220px
+$innerC_borderpx: 15px
 =circle
   border-radius: 50%
 =hw($h,$w)
@@ -19,17 +20,19 @@ $innerC_HW: 220px
   float: left
   display: inline-block
 .grayLines
-  +hw($grayborderpx,500px)
   background-color: $grayborderColor
-  z-index: 6
-  // margin: 0px
+  z-index: 5
   position: absolute
-  left: 0px
-  top: $gameboardHW/2 - $grayborderpx/2
 .hline
   @extend .grayLines
+  +hw($grayborderpx,$gameboardHW)
+  left: 0px
+  top: $gameboardHW/2 - $grayborderpx/2
 .vline
   @extend .grayLines
+  +hw($gameboardHW,$grayborderpx)
+  left: $gameboardHW/2 - $grayborderpx/2
+  top: 0px
 body
   background-color: #f8f8f8
 #gameboard
@@ -60,7 +63,8 @@ body
     +hw($innerC_HW,$innerC_HW)
     +circle
     background-color: #ECE7EE
-    z-index: 6
+    border: $innerC_borderpx solid $grayborderColor
+    z-index: 5
     position: absolute
-    left: $gameboardHW/2 - $innerC_HW/2
-    top: $gameboardHW/2 - $innerC_HW/2
+    left: $gameboardHW/2 - $innerC_HW/2 - $innerC_borderpx
+    top: $gameboardHW/2 - $innerC_HW/2 - $innerC_borderpx
