@@ -25,7 +25,7 @@ $(document).ready(function(){
     $('#yellow').css('background-color','#ffff5F');
   });
   $('#yellow').mouseup(function(){
-    $('#yellow').css('background-color','#FFFF00');
+    $('#yellow').css('background-color','#CCA707');
   });
 
 });
