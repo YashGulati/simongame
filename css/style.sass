@@ -1,3 +1,4 @@
+// compileCompressed: style.css
 $grayborderpx: 30px
 $downgreen: #00A74A
 $downred: #990000
@@ -5,6 +6,7 @@ $downyellow: #CCA707
 $downblue: #004D99
 $gameboardHW: 420px
 $heightwidthColor: $gameboardHW/2
+$innerC_HW: 220px
 =circle
   border-radius: 50%
 =hw($h,$w)
@@ -42,3 +44,11 @@ body
     background-color: $downblue
     right: -50px
     bottom: -50px
+  #innerC
+    +hw($innerC_HW,$innerC_HW)
+    +circle
+    background-color: #ECE7EE
+    z-index: 6
+    position: absolute
+    left: $gameboardHW/2 - $innerC_HW/2
+    top: $gameboardHW/2 - $innerC_HW/2
